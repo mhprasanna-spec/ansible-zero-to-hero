@@ -28,6 +28,8 @@ Authetication 2 ways
 	1. Password based
 	2. ssh based
 
+default way to talk to the ec2 is via ssh_key password based authetication is blocked by the ec2 instance we have to enable it by manually 
+
 
 Ansible Inventory it is a file which hold information about the worker nodes 
 file name is inventory.ini and ini is the extensition here and it holds the information like ubuntu@172.168.0.1
