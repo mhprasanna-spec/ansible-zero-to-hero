@@ -60,3 +60,17 @@ ansible there are two popular ways to provide the instructions
 
 ### D3 ####
 YAML --> it is human readable data serialization language. YAML(yet another markup language)
+yaml lint: YAML lint is the process of automatically checking YAML (YAML Ain't Markup Language) files for syntax errors, formatting mistakes, and stylistic inconsistencies.
+
+playbook : it is list or combination of plays
+start with --- (hiphens)
+and next line one hiphen then start writing it
+eg:
+	---
+- name: Update web servers
+  hosts: webservers
+  remote_user: root
+
+eg: https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_intro.html read this for syntax and for practice 
+play has list of host
+and the remote user who is going to execute it 
