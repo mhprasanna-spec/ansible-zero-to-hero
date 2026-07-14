@@ -1,21 +1,39 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+ANSIBle = is the automation platform for provisioning the infra , automation, config mangt, and n/w automation	
+configuration management tools 
+1 pupet
+2 chef
+3 salt
+4 ansible
 
-# Test binary, built with `go test -c`
-*.test
+sits beteeen system admin and your organization
+only prerequisite is ONLY NEED PYTHON
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+ansible in yaml . agentless archi (means no agent on the target machines ),scripts = playbooks
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+control node = ansbile installed 
+managed node = target machines (can be of any distributions like Linux,centos, Debian,windows, fedora)
 
-# Go workspace file
-go.work
+what ansible can do … 
+ 1. config management
+ 2. provisioning (creating rss on the cloud platform)
+ 3. also used for deployment in ci/cd like sending the artifact on the target machines
+ 4. network automation 
+
+
+ansible takes the code change it to python then apply It to the target machine which also have the python on it
+
+##### D2 ####
+
+Ansible Inventory it is a file which hold information about the worker nodes 
+file name is inventory.ini and ini is the extensition here and it holds the information like ubuntu@172.168.0.1
+and this file can be anywhere on the machine we only have the pass the location of this file to the ansible.	inventory is the heart of ansible because it tell the ansible what are their managed nodes.
+default location of the .ini if we don't provide it /etc/ansible/host
+and we can group the servers also like we only want to update the app server not the db server we can do that also .
+ansible there are two popular ways to provide the instructions 
+1.  ansible playbooks in yaml 
+	THESE are reusable, these are shareable and we use this when there are required multiple steps required for installation.
+2. Adhoc commands
+ 	when we use this when there is only one set task we use this like updating servers, install  apache ,
+	syntax : ansible [location of the inventory file] [-m module_name] [-a arugument_name] [name of the servers or groups]
+		eg: ansible inventory.ini -m shell -a "apt update -y" all
+		eg: ansible inventory.ini -m shell -a "sudo ls /etc/" all
