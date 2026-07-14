@@ -74,3 +74,9 @@ eg:
 eg: https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_intro.html read this for syntax and for practice 
 play has list of host
 and the remote user who is going to execute it 
+within each play there is task and task consists of multiple modules means actual performing execution.
+
+gather facts means connects to managed nodes which are mention inside the inventory.ini ansible check .
+
+cmd : ansible-playbook -i inventory.ini first-playbook.yaml
+performed 3 things (gather facts, install, copy file from host to remote with persissions on it)
