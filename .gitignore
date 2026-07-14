@@ -24,6 +24,11 @@ ansible takes the code change it to python then apply It to the target machine w
 
 ##### D2 ####
 
+Authetication 2 ways
+	1. Password based
+	2. ssh based
+
+
 Ansible Inventory it is a file which hold information about the worker nodes 
 file name is inventory.ini and ini is the extensition here and it holds the information like ubuntu@172.168.0.1
 and this file can be anywhere on the machine we only have the pass the location of this file to the ansible.	inventory is the heart of ansible because it tell the ansible what are their managed nodes.
