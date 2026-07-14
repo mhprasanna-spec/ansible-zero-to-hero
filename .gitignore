@@ -21,10 +21,19 @@ what ansible can do …
 
 
 ansible takes the code change it to python then apply It to the target machine which also have the python on it
+```
+sudo apt update
+sudo apt install software-properties-common -y
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible -y
+
+```
+
 
 ##### D2 ####
 
-Authetication 2 ways
+Authetication 2 ways using ssh_copy_id command
+
 	1. Password based
 	2. ssh based
 
