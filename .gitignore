@@ -56,3 +56,7 @@ ansible there are two popular ways to provide the instructions
 	syntax : ansible [location of the inventory file] [-m module_name] [-a arugument_name] [name of the servers or groups]
 		eg: ansible inventory.ini -m shell -a "apt update -y" all
 		eg: ansible inventory.ini -m shell -a "sudo ls /etc/" all
+
+
+### D3 ####
+YAML --> it is human readable data serialization language. YAML(yet another markup language)
